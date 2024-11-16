@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.selected {
+    border: 1px solid #336787;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: center;
+    min-height: 100vh;
+    background: #434343;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    background-color: black;
+    border-radius: 10px;
+}
+
+header {
+    padding: 20px 0px;
+    margin-left: 20px;
+}
+
+#wrapper-day,
+#wrapper-month,
+#wrapper-year {
+    background-color: #3b3b3b33;
+    padding: 25px;
+}
+
+.wrapper-day__header,
+.wrapper-month__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.day-current,
+.month-current,
+.decade {
+    font-weight: 500;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.day-current:hover,
+.month-current:hover,
+.decade:hover {
+    color: #767474;
+}
+
+.decade {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.icons-days,
+.icons-month,
+.icons-year {
+    display: flex;
+    gap: 20px;
+}
+
+.icons-days span,
+.icons-month span,
+.icons-year span {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.icons-days span:hover,
+.icons-month span:hover,
+.icons-year span:hover {
+    background-color: #434343;
+}
+
+/* Weeks */
+.weeks {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+}
+
+.weeks li {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.days ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    transition: transform 0.5s ease;
+    position: absolute;
+    width: 100%;
+}
+
+.days li {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: default;
+}
+
+.days li:hover {
+    background-color: #183d54;
+}
+
+.days .active {
+    background-color: #336787;
+}
+
+.days li.inactive {
+    color: #aaaaaa88;
+}
+
+/* Thang */
+#wrapper-month {
+    overflow: hidden;
+    display: none;
+}
+
+.wrapper-month__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.months {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.months li {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: default;
+}
+
+.months li:hover {
+    background-color: #183d54;
+}
+
+.months li.active {
+    background-color: #183d54;
+}
+
+.months li.inactive {
+    color: #aaaaaa88;
+}
+
+/* Year */
+#wrapper-year {
+    display: none;
+}
+
+.wrapper-year__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.years {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.years li {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.years li:hover {
+    background-color: #183d54;
+}
+
+.years li.active {
+    background-color: #183d54;
+}
+
+.years li.inactive {
+    color: #aaaaaa88;
+}
+
+.years li {
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+#wrapper-year {
+    overflow: hidden;
+    position: relative;
+}
+
+.years {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide-out {
+    transform: translateY(-100%); /* Trượt lên khi rời đi */
+}
+
+.slide-in {
+    transform: translateY(0); /* Trượt xuống khi xuất hiện */
+}
+
+.years li {
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}

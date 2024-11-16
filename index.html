@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+
+<body>
+  <main>
+    <header>
+      <p class="current-time">Thứ ba, ngày 11 tháng 11</p>
+    </header>
+    <!-- Ngày -->
+    <section id="wrapper-day">
+      <div class="wrapper-day__header">
+        <p class="day-current">Tháng 11, 2024</p>
+        <div class="icons-days">
+          <span id="prev">
+            <i class="fa-solid fa-caret-up"></i>
+          </span>
+          <span id="next">
+            <i class="fa-solid fa-caret-down"></i>
+          </span>
+        </div>
+      </div>
+      <ul class="weeks">
+        <li>Sun</li>
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+      </ul>
+      <ul class="days">
+      </ul>
+    </section>
+
+
+    <!-- Tháng -->
+    <section id="wrapper-month">
+      <div class="wrapper-month__header">
+        <p class="month-current">2024</p>
+        <div class="icons-month">
+          <span id="prev">
+            <i class="fa-solid fa-caret-up"></i>
+          </span>
+          <span id="next">
+            <i class="fa-solid fa-caret-down"></i>
+          </span>
+        </div>
+      </div>
+      <ul class="months">
+      </ul>
+    </section>
+    <!-- Năm -->
+    <section id="wrapper-year">
+      <div class="wrapper-year__header">
+        <p class="decade">2020-2029</p>
+        <div class="icons-year">
+          <span id="prev">
+            <i class="fa-solid fa-caret-up"></i>
+          </span>
+          <span id="next">
+            <i class="fa-solid fa-caret-down"></i>
+          </span>
+        </div>
+      </div>
+      <ul class="years">
+
+      </ul>
+    </section>
+  </main>
+  <script src="./scrip.js"></script>
+</body>
+
+</html>
